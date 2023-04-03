@@ -3,4 +3,3 @@
 
  echo " [Husky] pre-commit hook..."
  yarn lint-staged
- yarn test
