@@ -12,13 +12,16 @@ npm-debug.log
 yarn-error.log
 
 # IDEs and editors
-.idea/
+.idea
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+
+# database
+pgdata
 
 # Visual Studio Code
 .vscode/*
@@ -29,7 +32,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+/.angular
 .sass-cache/
 /connect.lock
 /coverage
