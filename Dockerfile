@@ -12,3 +12,4 @@ RUN yarn build
 # STAGE 2: copy built files from node image into nginx image
 FROM nginx:alpine
 COPY --from=build /usr/src/app/dist/stairway-to-heaven-client /usr/share/nginx/html
+VOLUME /123

@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  # postgresql database container
+  # postgresql database
   db:
     container_name: sth-postgres-db
     image: postgres:15-alpine
@@ -14,13 +14,17 @@ services:
       - ./pgdata:/var/lib/postgresql/data
     ports:
       - ${TYPEORM_PORT}:${TYPEORM_PORT}
+    command: -p ${TYPEORM_PORT}
 
-  # nest.js api container
-  server:
+  # nest.js api
+  api:
     container_name: sth-api
-    build: ../stairway-to-heaven
+    build: ../stairway-to-heaven-api
     depends_on:
       - db
+    volumes:
+      - ./api:/usr/src/app
+      - /usr/src/node_modules
     restart: unless-stopped
     #    network_mode: host
     # investigate: what this option does. It brakes things and causes error 'can't find db while connection to db
@@ -36,7 +40,7 @@ services:
     ports:
       - ${API_PORT}:3001
 
-  # angular app container
+  # angular app
   client:
     container_name: sth-client
     build:
@@ -46,6 +50,6 @@ services:
       - "4200:80"
     depends_on:
       - db
-      - server
+      - api
     restart: unless-stopped
 
