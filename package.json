@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.1",
+    "@angular/cdk": "^16.2.1",
     "@angular/common": "^16.2.1",
     "@angular/compiler": "^16.2.1",
     "@angular/core": "^16.2.1",
@@ -19,19 +20,33 @@
     "@angular/platform-browser": "^16.2.1",
     "@angular/platform-browser-dynamic": "^16.2.1",
     "@angular/router": "^16.2.1",
+    "@taiga-ui/addon-charts": "^3.42.1",
+    "@taiga-ui/addon-mobile": "3.42.1",
+    "@taiga-ui/addon-preview": "^3.42.1",
+    "@taiga-ui/addon-table": "^3.42.1",
+    "@taiga-ui/addon-tablebars": "^3.42.1",
+    "@taiga-ui/cdk": "^3.42.1",
+    "@taiga-ui/core": "^3.42.1",
+    "@taiga-ui/icons": "^3.42.1",
+    "@taiga-ui/kit": "^3.42.1",
+    "@taiga-ui/layout": "^3.42.1",
+    "@taiga-ui/styles": "^3.42.1",
+    "@tinkoff/ng-dompurify": "3.0.0",
+    "dompurify": "2.2.9",
     "rxjs": "^7.8.1",
     "tslib": "^2.6.2",
     "zone.js": "~0.13.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
     "@angular-devkit/build-angular": "^16.2.0",
     "@angular/cli": "~16.2.0",
     "@angular/compiler-cli": "^16.2.1",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/dompurify": "2.2.3",
     "@types/jasmine": "^4.3.5",
-    "jasmine-core": "^5.1.0",
     "husky": "^8.0.3",
+    "jasmine-core": "^5.1.0",
     "karma": "^6.4.2",
     "karma-chrome-launcher": "^3.2.0",
     "karma-coverage": "^2.2.1",
@@ -41,6 +56,8 @@
     "typescript": "^5.1.6"
   },
   "lint-staged": {
-    "*.ts": "prettier --write src/**/*.ts"
+    "*.ts": "prettier --write src/**/*.ts",
+    "*.scss": "prettier --write src/**/*.scss",
+    "*.html": "prettier --write src/**/*.html"
   }
 }

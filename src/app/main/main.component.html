@@ -1,1 +1,18 @@
-<p>main works!</p>
+<div>
+  <tui-app-bar class="black">
+    <button icon="tuiIconMenuLarge" title="Menu" tuiIconButton tuiSlot="left">
+      Cancel
+    </button>
+    <span class="white">MyJoyList</span>
+    <button icon="tuiIconSettingsLarge" tuiIconButton tuiSlot="right"></button>
+    <button
+      icon="tuiIconUserLarge"
+      title="User"
+      tuiIconButton
+      tuiSlot="right"
+    ></button>
+  </tui-app-bar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
