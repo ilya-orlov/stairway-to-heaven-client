@@ -1,7 +1,16 @@
 <div>
   <tui-app-bar class="black">
-    <button icon="tuiIconMenuLarge" title="Menu" tuiIconButton tuiSlot="left">
+    <button
+      icon="tuiIconMenuLarge"
+      title="Menu"
+      tuiIconButton
+      tuiSlot="left"
+      type="button"
+      (click)="toggleSidebar(true)"
+      (tuiActiveZoneChange)="toggleSidebar($event)"
+    >
       Cancel
+      <div *tuiSidebar="isSidebarOpen; direction: 'left'">Sidebar content</div>
     </button>
     <span class="white">MyJoyList</span>
     <button icon="tuiIconSettingsLarge" tuiIconButton tuiSlot="right"></button>

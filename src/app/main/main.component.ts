@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent {}
+export class MainComponent {
+  isSidebarOpen = false;
+
+  toggleSidebar(value: boolean): void {
+    this.isSidebarOpen = value;
+  }
+}

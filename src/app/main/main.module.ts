@@ -3,12 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
-import { TuiAppBarModule } from '@taiga-ui/addon-mobile';
+import { TuiAppBarModule, TuiSidebarModule } from '@taiga-ui/addon-mobile';
 import { TUI_BUTTON_OPTIONS, TuiButtonModule } from '@taiga-ui/core';
+import { TuiActiveZoneModule } from '@taiga-ui/cdk';
 
 @NgModule({
   declarations: [MainComponent],
-  imports: [CommonModule, MainRoutingModule, TuiAppBarModule, TuiButtonModule],
+  imports: [
+    CommonModule,
+    MainRoutingModule,
+    TuiAppBarModule,
+    TuiButtonModule,
+    TuiSidebarModule,
+    TuiActiveZoneModule,
+  ],
   providers: [
     {
       provide: TUI_BUTTON_OPTIONS,
