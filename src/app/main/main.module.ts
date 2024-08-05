@@ -4,7 +4,11 @@ import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { TuiAppBarModule, TuiSidebarModule } from '@taiga-ui/addon-mobile';
-import { TUI_BUTTON_OPTIONS, TuiButtonModule } from '@taiga-ui/core';
+import {
+  TUI_BUTTON_OPTIONS,
+  TuiButtonModule,
+  TuiLinkModule,
+} from '@taiga-ui/core';
 import { TuiActiveZoneModule } from '@taiga-ui/cdk';
 
 @NgModule({
@@ -16,6 +20,7 @@ import { TuiActiveZoneModule } from '@taiga-ui/cdk';
     TuiButtonModule,
     TuiSidebarModule,
     TuiActiveZoneModule,
+    TuiLinkModule,
   ],
   providers: [
     {
