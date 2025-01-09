@@ -1,7 +1,7 @@
 <div>
   <tui-app-bar class="black">
     <button
-      icon="tuiIconMenuLarge"
+      iconStart="@tui.menu"
       title="Menu"
       tuiIconButton
       tuiSlot="left"
@@ -13,9 +13,9 @@
       <div *tuiSidebar="isSidebarOpen; direction: 'left'">Sidebar content</div>
     </button>
     <span class="white">MyJoyList</span>
-    <button icon="tuiIconSettingsLarge" tuiIconButton tuiSlot="right"></button>
+    <button iconStart="@tui.settings" tuiIconButton tuiSlot="right"></button>
     <button
-      icon="tuiIconUserLarge"
+      iconStart="@tui.user"
       title="User"
       tuiIconButton
       tuiSlot="right"

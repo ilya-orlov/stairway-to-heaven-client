@@ -1,26 +1,23 @@
+import { TuiSidebar } from "@taiga-ui/addon-mobile";
+import { TuiAppBar } from "@taiga-ui/layout";
+import { TuiActiveZone } from "@taiga-ui/cdk";
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
-import { TuiAppBarModule, TuiSidebarModule } from '@taiga-ui/addon-mobile';
-import {
-  TUI_BUTTON_OPTIONS,
-  TuiButtonModule,
-  TuiLinkModule,
-} from '@taiga-ui/core';
-import { TuiActiveZoneModule } from '@taiga-ui/cdk';
+import { TUI_BUTTON_OPTIONS, TuiLink, TuiButton } from '@taiga-ui/core';
 
 @NgModule({
   declarations: [MainComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
-    TuiAppBarModule,
-    TuiButtonModule,
-    TuiSidebarModule,
-    TuiActiveZoneModule,
-    TuiLinkModule,
+    ...TuiAppBar,
+    TuiButton,
+    ...TuiSidebar,
+    TuiActiveZone,
+    TuiLink,
   ],
   providers: [
     {
